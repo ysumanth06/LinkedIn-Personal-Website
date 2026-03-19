@@ -40,7 +40,7 @@ const Hero = () => (
           </a>
         </div>
       </div>
-      <div className="lg:col-span-4 hidden lg:block">
+      <div className="lg:col-span-4 mt-12 lg:mt-0 mx-8 lg:mx-0">
         <div className="relative group">
           <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
           <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-surface-container border border-outline-variant/15 flex items-center justify-center">
@@ -100,9 +100,6 @@ const Experience = () => (
             <p className="text-secondary font-medium mb-6">SOLUTIONSOFT INC</p>
             <p className="text-on-surface-variant text-sm leading-relaxed">Analyzed and developed custom applications on the Salesforce Force.com platform. Designed advanced integrations to support contract negotiation workflows and eSignature processes.</p>
           </div>
-          <div className="mt-8 pt-8 border-t border-outline-variant/10">
-            <span className="text-xs text-on-surface-variant italic">Ref: Apttus CLM & Intelligence</span>
-          </div>
         </div>
 
         <div className="p-8 bg-surface-container border border-outline-variant/10 rounded-xl hover:border-primary/30 transition-colors">
@@ -138,8 +135,8 @@ const Skills = () => (
           'Data Automation', 'Workflow & Approvals'
         ].map((skill, idx) => (
           <div key={idx} className="flex items-center gap-3 bg-surface-container-high p-4 rounded-lg border border-outline-variant/5">
-            <div className="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(74,248,227,0.6)]"></div>
-            <span className="font-label text-xs font-bold tracking-widest uppercase truncate" title={skill}>{skill}</span>
+            <div className="w-2 h-2 rounded-full bg-secondary shadow-[0_0_8px_rgba(74,248,227,0.6)] shrink-0"></div>
+            <span className="font-label text-xs font-bold tracking-widest uppercase" title={skill}>{skill}</span>
           </div>
         ))}
       </div>
@@ -150,7 +147,7 @@ const Skills = () => (
 const Projects = ({ setSelectedProject }) => {
   const projectsData = [
     {
-      title: "SAS",
+      title: "SAS - Salesforce Agentic Systems",
       description: "A reusable skill library for Salesforce-focused coding agents.",
       fullDescription: "SAS - A reusable skill library for Salesforce-focused coding agents—covering Apex, Flow, LWC, SOQL, metadata, integration, testing, deployment, and Agentforce workflows specially built for cursor ai.",
       tags: ["AGENTFORCE", "AI", "CURSOR"],
@@ -256,7 +253,6 @@ const Footer = () => (
       <div className="flex gap-8">
         <a className="font-['Inter'] uppercase tracking-[0.1em] text-[10px] text-[#adaaaa] hover:text-[#ff9dac] transition-colors opacity-80 hover:opacity-100" href="https://github.com/ysumanth06" target="_blank" rel="noreferrer">GitHub</a>
         <a className="font-['Inter'] uppercase tracking-[0.1em] text-[10px] text-[#adaaaa] hover:text-[#ff9dac] transition-colors opacity-80 hover:opacity-100" href="https://www.linkedin.com/in/ysumanth" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a className="font-['Inter'] uppercase tracking-[0.1em] text-[10px] text-[#adaaaa] hover:text-[#ff9dac] transition-colors opacity-80 hover:opacity-100" href="#">Twitter</a>
       </div>
     </div>
   </footer>
