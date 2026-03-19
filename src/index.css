@@ -1,0 +1,5 @@
+/* Resetting index css since Tailwind is managing the UI via CDN */
+body {
+  margin: 0;
+  padding: 0;
+}
