@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './App.css';
+import profilePic from './assets/profile.jpg';
 
 const Navbar = () => (
   <nav className="fixed top-0 w-full z-50 bg-[#0e0e0e]/40 backdrop-blur-xl shadow-2xl shadow-black/50">
@@ -43,7 +44,7 @@ const Hero = () => (
         <div className="relative group">
           <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
           <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-surface-container border border-outline-variant/15 flex items-center justify-center">
-             <img src="/profile.jpg" alt="Sumanth Yanamala" className="w-full h-full object-cover grayscale contrast-125 transition-transform duration-700 group-hover:scale-105" />
+             <img src={profilePic} alt="Sumanth Yanamala" className="w-full h-full object-cover grayscale contrast-125 transition-transform duration-700 group-hover:scale-105" />
              <div className="absolute inset-0 bg-gradient-to-t from-[#0e0e0e]/50 to-transparent"></div>
           </div>
         </div>
