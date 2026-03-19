@@ -191,8 +191,8 @@ const Projects = ({ setSelectedProject }) => {
   return (
     <section className="py-32 bg-surface" id="projects">
       <div className="max-w-7xl mx-auto px-8">
-        <div className="flex items-center gap-8 mb-20">
-          <h2 className="font-headline text-5xl font-bold tracking-tighter shrink-0">Projects currently working on</h2>
+        <div className="flex items-center gap-4 md:gap-8 mb-20">
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter shrink-0">What I'm building</h2>
           <div className="h-[1px] w-full bg-outline-variant/20"></div>
         </div>
 
