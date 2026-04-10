@@ -37,7 +37,7 @@ const Hero = () => (
         </p>
         <div className="flex flex-wrap gap-6">
           <a href="#projects" className="bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed px-8 py-4 rounded-md font-bold text-sm tracking-wider uppercase transition-transform active:scale-95 inline-block text-center border-none">
-            Launch Terminal
+            View Projects
           </a>
           <a href="#contact" className="bg-surface-variant/20 border border-secondary/15 text-secondary px-8 py-4 rounded-md font-bold text-sm tracking-wider uppercase backdrop-blur-md transition-colors hover:bg-secondary/10 inline-block text-center">
             Establish Connection
@@ -185,8 +185,7 @@ const Projects = ({ setSelectedProject }) => {
       fullDescription: "SFSpecKit is a high-performance framework designed to enforce architectural rigor in Salesforce development. It leverages AI logic to automate specification clarity, planning, and autonomous implementation while maintaining human-in-the-loop oversight. Optimized for multi-org enterprise environments.",
       tags: ["SALESFORCE", "AIDD", "SDLC"],
       bgText: "SFSpec",
-      colorClass: "text-primary",
-      large: true
+      colorClass: "text-primary"
     },
     {
       title: "Project Nimbus",
@@ -254,11 +253,11 @@ const Projects = ({ setSelectedProject }) => {
           <div className="h-[1px] w-full bg-outline-variant/20"></div>
         </div>
 
-        <div className="bento-grid">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projectsData.map((proj, idx) => (
             <div 
               key={idx} 
-              className={`architect-card group cursor-pointer p-8 rounded-2xl flex flex-col justify-between ${proj.large ? 'bento-item-large' : 'bento-item-medium'}`}
+              className="architect-card group cursor-pointer p-8 rounded-2xl flex flex-col justify-between"
               onClick={() => setSelectedProject(proj)}
             >
               <div>
@@ -298,10 +297,18 @@ const Contact = () => (
     <div className="max-w-7xl mx-auto px-8 text-center">
       <span className="font-label text-xs tracking-[0.3em] text-secondary font-bold mb-8 block">ESTABLISH CONNECTION</span>
       <h2 className="font-headline text-5xl md:text-7xl font-bold tracking-tighter mb-12">Let's build the <span className="text-primary italic">future.</span></h2>
-      <a className="inline-block font-headline text-2xl md:text-4xl font-light hover:text-secondary transition-colors underline underline-offset-8 decoration-primary/30 hover:decoration-secondary" href="https://www.linkedin.com/in/ysumanth" target="_blank" rel="noreferrer">
-          linkedin.com/in/ysumanth
-      </a>
-      <div className="mt-8">
+      <div className="flex flex-col items-center gap-6">
+        <a 
+          className="flex items-center gap-3 bg-[#0a66c2] hover:bg-[#004182] text-white px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-xl shadow-[#0a66c2]/20" 
+          href="https://www.linkedin.com/in/ysumanth" 
+          target="_blank" 
+          rel="noreferrer"
+        >
+          <svg className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+          </svg>
+          LinkedIn Profile
+        </a>
         <a className="inline-block font-headline text-lg text-on-surface-variant hover:text-primary transition-colors underline underline-offset-4 decoration-outline-variant" href="mailto:sumanth.yanamala@gmail.com">
             sumanth.yanamala@gmail.com
         </a>
@@ -314,7 +321,7 @@ const Footer = () => (
   <footer className="bg-[#0e0e0e] w-full py-12 px-8 border-t border-[#484847]/15">
     <div className="flex flex-col md:flex-row justify-between items-center gap-6 max-w-7xl mx-auto">
       <div className="font-['Inter'] uppercase tracking-[0.1em] text-[10px] text-[#adaaaa]">
-          © 2024 SUMANTH REDDY YANAMALA. ALL RIGHTS RESERVED.
+          © 2026 SUMANTH REDDY YANAMALA. ALL RIGHTS RESERVED.
       </div>
       <div className="flex gap-8">
         <a className="font-['Inter'] uppercase tracking-[0.1em] text-[10px] text-[#adaaaa] hover:text-[#ff9dac] transition-colors opacity-80 hover:opacity-100" href="https://github.com/ysumanth06" target="_blank" rel="noreferrer">GitHub</a>
