@@ -1,1 +1,100 @@
-/* Empty */
+/* Architect-Grade Design System */
+
+:root {
+  --primary: #c799ff;
+  --secondary: #4af8e3;
+  --surface: #0e0e0e;
+  --surface-container: #1a1a1a;
+  --outline-variant: #484847;
+}
+
+.blueprint-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.architect-card {
+  background: rgba(26, 26, 26, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(72, 72, 71, 0.3);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.architect-card:hover {
+  border-color: var(--primary);
+  background: rgba(26, 26, 26, 0.8);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -20px rgba(0, 0, 0, 0.5);
+}
+
+.tech-tag {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 2px 8px;
+  border: 1px solid rgba(74, 248, 227, 0.3);
+  color: var(--secondary);
+  background: rgba(74, 248, 227, 0.05);
+  border-radius: 4px;
+}
+
+.serial-decorator {
+  font-family: 'Space Grotesk', monospace;
+  font-size: 9px;
+  color: #484847;
+  letter-spacing: 0.2em;
+}
+
+@keyframes pulse-soft {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.5); opacity: 0.2; }
+  100% { transform: scale(1); opacity: 0.5; }
+}
+
+.pulse-indicator {
+  position: relative;
+}
+
+.pulse-indicator::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: var(--primary);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse-soft 2s infinite;
+}
+
+/* Bento Grid Utilities */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 1.5rem;
+}
+
+.bento-item-large {
+  grid-column: span 12;
+}
+
+@media (min-width: 768px) {
+  .bento-item-large {
+    grid-column: span 8;
+    grid-row: span 2;
+  }
+  .bento-item-medium {
+    grid-column: span 4;
+  }
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}

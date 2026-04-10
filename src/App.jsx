@@ -18,11 +18,15 @@ const Navbar = () => (
 );
 
 const Hero = () => (
-  <section className="relative min-h-screen flex items-center justify-center pt-20 hero-gradient" id="home">
-    <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+  <section className="relative min-h-screen flex items-center justify-center pt-20 hero-gradient overflow-hidden" id="home">
+    <div className="absolute inset-0 blueprint-grid opacity-20 pointer-events-none"></div>
+    <div className="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
       <div className="lg:col-span-8 space-y-8">
-        <div className="inline-block px-3 py-1 bg-surface-container-high rounded-md mb-6">
-          <span className="text-secondary font-label text-[10px] tracking-[0.2em] font-bold">SYSTEM STATUS: ACTIVE</span>
+        <div className="inline-block px-3 py-1 bg-surface-container-high rounded-md mb-6 border border-outline-variant/30">
+          <span className="text-secondary font-label text-[10px] tracking-[0.2em] font-bold uppercase flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-secondary pulse-indicator"></span>
+            System Status: Optimal
+          </span>
         </div>
         <h1 className="font-headline text-6xl md:text-8xl font-bold tracking-tighter leading-tight mb-8">
           Hello, I'm <span className="text-primary italic">Sumanth.</span><br/>
@@ -33,15 +37,16 @@ const Hero = () => (
         </p>
         <div className="flex flex-wrap gap-6">
           <a href="#projects" className="bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed px-8 py-4 rounded-md font-bold text-sm tracking-wider uppercase transition-transform active:scale-95 inline-block text-center border-none">
-            View Projects
+            Launch Terminal
           </a>
           <a href="#contact" className="bg-surface-variant/20 border border-secondary/15 text-secondary px-8 py-4 rounded-md font-bold text-sm tracking-wider uppercase backdrop-blur-md transition-colors hover:bg-secondary/10 inline-block text-center">
-            Connect
+            Establish Connection
           </a>
         </div>
       </div>
       <div className="lg:col-span-4 mt-12 lg:mt-0 mx-8 lg:mx-0">
         <div className="relative group">
+          <span className="absolute -top-6 left-0 serial-decorator">NODE_IDENTITY::SUMANTH_Y</span>
           <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
           <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-surface-container border border-outline-variant/15 flex items-center justify-center">
              <img src={profilePic} alt="Sumanth Yanamala" className="w-full h-full object-cover grayscale contrast-125 transition-transform duration-700 group-hover:scale-105" />
@@ -54,11 +59,13 @@ const Hero = () => (
 );
 
 const About = () => (
-  <section className="py-32 bg-surface-container-low" id="about">
-    <div className="max-w-7xl mx-auto px-8">
+  <section className="py-32 bg-surface-container-low relative overflow-hidden" id="about">
+    <div className="absolute inset-0 blueprint-grid opacity-10 pointer-events-none"></div>
+    <div className="max-w-7xl mx-auto px-8 relative z-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
         <div className="lg:col-span-4">
-          <h2 className="font-headline text-4xl font-bold tracking-tight text-primary">About</h2>
+          <span className="serial-decorator block mb-4">CORE_INTEL::01</span>
+          <h2 className="font-headline text-4xl font-bold tracking-tight text-primary">Mission Profile</h2>
           <div className="w-12 h-1 bg-secondary mt-4"></div>
         </div>
         <div className="lg:col-span-8 lg:pl-12">
@@ -66,13 +73,13 @@ const About = () => (
             Throughout my journey—from architecting custom enhancements in Apttus/Conga CLM to leading multi-team Salesforce rollouts—I’ve consistently delivered innovative solutions that align with evolving business and regulatory needs.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
-            <div className="space-y-4">
-              <span className="font-label text-xs tracking-widest text-secondary font-bold">CORE PHILOSOPHY</span>
-              <p className="text-on-surface-variant">Efficiency is driven by data. I enjoy mentoring teams, optimizing engineering processes, and staying ahead with tools like AI/LLMs to improve accuracy.</p>
+            <div className="space-y-4 architect-card p-6 rounded-lg">
+              <span className="font-label text-xs tracking-widest text-secondary font-bold">ENGINEERING PHILOSOPHY</span>
+              <p className="text-on-surface-variant text-sm">Efficiency is driven by data. I enjoy mentoring teams, optimizing engineering processes, and staying ahead with tools like AI/LLMs to improve accuracy.</p>
             </div>
-            <div className="space-y-4">
-              <span className="font-label text-xs tracking-widest text-secondary font-bold">BEYOND THE CODE</span>
-              <p className="text-on-surface-variant">Outside of work, you’ll usually find me on a badminton court, experimenting in the kitchen, or exploring new food spots. Always up for a good conversation about tech, food, or AI trends.</p>
+            <div className="space-y-4 architect-card p-6 rounded-lg">
+              <span className="font-label text-xs tracking-widest text-secondary font-bold">EXTERNAL MODULES</span>
+              <p className="text-on-surface-variant text-sm">Outside of work, you’ll usually find me on a badminton court, experimenting in the kitchen, or exploring new food spots. Always up for a good conversation about tech, food, or AI trends.</p>
             </div>
           </div>
         </div>
@@ -81,44 +88,70 @@ const About = () => (
   </section>
 );
 
-const Experience = () => (
-  <section className="py-32 bg-surface" id="experience">
-    <div className="max-w-7xl mx-auto px-8">
-      <h2 className="font-headline text-4xl font-bold tracking-tight mb-20 text-center uppercase tracking-[0.2em]">The Timeline</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="p-8 bg-surface-container border border-outline-variant/10 rounded-xl hover:border-primary/30 transition-colors">
-          <span className="font-label text-[10px] text-primary tracking-widest mb-6 block">2023 — PRESENT</span>
-          <h3 className="font-headline text-2xl font-bold mb-2">Salesforce/Conga Architect</h3>
-          <p className="text-secondary font-medium mb-6">EXPRESS SCRIPTS</p>
-          <p className="text-on-surface-variant text-sm leading-relaxed">Serving as the project lead and Solution Architect for Conga CLM implementation projects across complex healthcare and PBM ecosystems.</p>
-        </div>
+const Experience = () => {
+  const experiences = [
+    {
+      period: "2023 — PRESENT",
+      role: "Salesforce/Conga CLM Solution Architect",
+      company: "EVERNORTH HEALTH SERVICES",
+      description: "Leading enterprise-scale Conga CLM implementations and architecting AI-driven automation strategies for healthcare ecosystems.",
+      stack: ["Conga CLM", "Salesforce Core", "Agentforce", "n8n"],
+      active: true
+    },
+    {
+      period: "2021 — 2023",
+      role: "Solution Architect & Sr. Engineer",
+      company: "SOLUTIONSOFT INC",
+      description: "Designed complex Salesforce integrations and custom contract negotiation workflows featuring advanced eSignature protocols.",
+      stack: ["Salesforce", "Apex", "DocuSign API", "AWS"],
+      active: false
+    },
+    {
+      period: "2019 — 2021",
+      role: "Sr. Salesforce & CLM Engineer",
+      company: "SVK SYSTEMS INC",
+      description: "Developed and maintained high-performance contract lifecycle management systems and custom intelligent workflow automations.",
+      stack: ["Apttus CLM", "Visualforce", "SOQL", "Intelligent Approvals"],
+      active: false
+    }
+  ];
 
-        <div className="p-8 bg-surface-container-high border border-outline-variant/10 rounded-xl lg:row-span-2 flex flex-col justify-between">
-          <div>
-            <span className="font-label text-[10px] text-primary tracking-widest mb-6 block">2021 — 2023</span>
-            <h3 className="font-headline text-2xl font-bold mb-2">Solution Architect & Sr. Engineer</h3>
-            <p className="text-secondary font-medium mb-6">SOLUTIONSOFT INC</p>
-            <p className="text-on-surface-variant text-sm leading-relaxed">Analyzed and developed custom applications on the Salesforce Force.com platform. Designed advanced integrations to support contract negotiation workflows and eSignature processes.</p>
-          </div>
-        </div>
-
-        <div className="p-8 bg-surface-container border border-outline-variant/10 rounded-xl hover:border-primary/30 transition-colors">
-          <span className="font-label text-[10px] text-primary tracking-widest mb-6 block">2019 — 2021</span>
-          <h3 className="font-headline text-2xl font-bold mb-2">Sr. Salesforce Engineer</h3>
-          <p className="text-secondary font-medium mb-6">SVK SYSTEMS INC</p>
-          <p className="text-on-surface-variant text-sm leading-relaxed">Developed and maintained Contract Life Cycle Management (CLM) custom applications, Intelligent Workflow Approvals, and robust external API integrations.</p>
-        </div>
-
-        <div className="p-8 bg-surface-container-low border border-outline-variant/10 rounded-xl md:col-span-2 lg:col-span-1">
-          <span className="font-label text-[10px] text-primary tracking-widest mb-6 block">2018 — 2019</span>
-          <h3 className="font-headline text-2xl font-bold mb-2">Salesforce/Apttus Developer</h3>
-          <p className="text-secondary font-medium mb-6">VARIOUS</p>
-          <p className="text-on-surface-variant text-sm leading-relaxed">Provided technical support for R&D Finance and Operations, building Visualforce APIs, Web Services, and comprehensive XML integrations.</p>
+  return (
+    <section className="py-32 bg-surface relative overflow-hidden" id="experience">
+      <div className="absolute inset-0 blueprint-grid opacity-20"></div>
+      <div className="max-w-7xl mx-auto px-8 relative z-10">
+        <h2 className="font-headline text-4xl font-bold tracking-tight mb-20 uppercase tracking-[0.2em] text-primary">System History</h2>
+        
+        <div className="space-y-12">
+          {experiences.map((exp, idx) => (
+            <div key={idx} className="flex gap-8 group">
+              <div className="flex flex-col items-center">
+                <div className={`w-3 h-3 rounded-full border-2 ${exp.active ? 'bg-primary border-primary pulse-indicator' : 'border-outline-variant bg-surface'}`}></div>
+                {idx !== experiences.length - 1 && <div className="w-[1px] h-full bg-outline-variant/30 mt-2"></div>}
+              </div>
+              <div className="pb-12 architect-card p-8 rounded-xl w-full">
+                <div className="flex flex-col md:flex-row justify-between mb-4">
+                  <div>
+                    <span className="serial-decorator block mb-2">AUTH_ID: {exp.company.substring(0,3)}_CONF_00{idx+1}</span>
+                    <h3 className="font-headline text-2xl font-bold">{exp.role}</h3>
+                    <p className="text-secondary font-medium tracking-wide">{exp.company}</p>
+                  </div>
+                  <span className="font-label text-xs text-primary font-bold tracking-widest mt-2 md:mt-0">{exp.period}</span>
+                </div>
+                <p className="text-on-surface-variant text-sm leading-relaxed mb-6 max-w-3xl">{exp.description}</p>
+                <div className="flex flex-wrap gap-2">
+                  {exp.stack.map((tech, tIdx) => (
+                    <span key={tIdx} className="tech-tag">{tech}</span>
+                  ))}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 const Skills = () => (
   <section className="py-32 bg-surface-container-low" id="skills">
@@ -147,77 +180,86 @@ const Skills = () => (
 const Projects = ({ setSelectedProject }) => {
   const projectsData = [
     {
-      title: "SAS - Salesforce Agentic Systems",
-      description: "A reusable skill library for Salesforce-focused coding agents.",
+      title: "SFSpecKit",
+      description: "Enterprise-Grade Spec-Driven Development (SDD) Framework for Salesforce.",
+      fullDescription: "SFSpecKit is a high-performance framework designed to enforce architectural rigor in Salesforce development. It leverages AI logic to automate specification clarity, planning, and autonomous implementation while maintaining human-in-the-loop oversight. Optimized for multi-org enterprise environments.",
+      tags: ["SALESFORCE", "AIDD", "SDLC"],
+      bgText: "SFSpec",
+      colorClass: "text-primary",
+      large: true
+    },
+    {
+      title: "Project Nimbus",
+      description: "Autonomous Salesforce Admin Platform for conversational org management.",
+      fullDescription: "A sophisticated orchestration engine that transforms natural language requests into complex Salesforce administrative actions. Integrated with 20+ specialized development skills mapping to Apex, Flow, Metadata, and Security layers.",
+      tags: ["AI", "AUTO-ADMIN", "ORCHESTRATION"],
+      bgText: "Nimbus",
+      colorClass: "text-secondary"
+    },
+    {
+      title: "Salesforce Smart Grid",
+      description: "Metadata-driven high-performance data grid platform.",
+      fullDescription: "A native Salesforce solution providing advanced grid capabilities. Features include dynamic object discovery, bulk save operations with partial resolution, and metadata-aware filtration. Designed for high-volume data entry and management.",
+      tags: ["LWC", "METADATA", "UX"],
+      bgText: "SmartGrid",
+      colorClass: "text-tertiary"
+    },
+    {
+      title: "SAS - Agentic Systems",
+      description: "Reusable skill library for Salesforce-focused coding agents.",
       fullDescription: "SAS - A reusable skill library for Salesforce-focused coding agents—covering Apex, Flow, LWC, SOQL, metadata, integration, testing, deployment, and Agentforce workflows specially built for cursor ai.",
       tags: ["AGENTFORCE", "AI", "CURSOR"],
       bgText: "SAS",
       colorClass: "text-primary"
     },
     {
-      title: "DocGen",
-      description: "A native salesforce document generation and digital signature platform.",
+      title: "DocGen Engine",
+      description: "Native Salesforce document generation platform for enterprise scale.",
       fullDescription: "DocGen - A native salesforce document generation and digital signature platform designed for high-performance and enterprise-scale (20,000+ records).",
-      tags: ["APEX", "DOCUMENTATION", "SIGNATURE"],
+      tags: ["APEX", "DOCS", "DIGITAL-SIG"],
       bgText: "DocGen",
-      colorClass: "text-secondary"
-    },
-    {
-      title: "Burrow",
-      description: "Worlds First AI enabled Salesforce Qa Automation Tool.",
-      fullDescription: "Burrow - Worlds First AI enabled Salesforce Qa Automation Tool with auto scripting and metadata awareness.",
-      tags: ["QA", "AUTOMATION", "AI"],
-      bgText: "Burrow",
-      colorClass: "text-tertiary"
-    },
-    {
-      title: "Mass File Exporter",
-      description: "A Native Salesforce Tool to export mass file with advanced soql.",
-      fullDescription: "Mass File Exporter - A Native Salesforce Tool to export mass file with advanced soql including the ability for complex app exchange products.",
-      tags: ["DATA", "MIGRATION", "SOQL"],
-      bgText: "FileExp",
-      colorClass: "text-primary"
-    },
-    {
-      title: "AI Contract Analysis",
-      description: "Intelligent Document Analysis Tool highlighting key information.",
-      fullDescription: "AI Contract Analysis - Intelligent Document Analysis Tool which auto identified key information in the contract and highlights to users as a beautiful tiles with in salesforce. Bring your own Ai modal for enterprises.",
-      tags: ["CONTRACTS", "AI", "MODELS"],
-      bgText: "AI Cont.",
       colorClass: "text-secondary"
     }
   ];
 
   return (
-    <section className="py-32 bg-surface" id="projects">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="py-32 bg-surface relative" id="projects">
+      <div className="max-w-7xl mx-auto px-8 relative z-10">
         <div className="flex items-center gap-4 md:gap-8 mb-20">
-          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter shrink-0">What I'm building</h2>
+          <h2 className="font-headline text-3xl sm:text-4xl md:text-5xl font-bold tracking-tighter shrink-0">What I'm building <span className="text-secondary italic">outside of work</span></h2>
           <div className="h-[1px] w-full bg-outline-variant/20"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="bento-grid">
           {projectsData.map((proj, idx) => (
-            <div key={idx} className="group cursor-pointer" onClick={() => setSelectedProject(proj)}>
-              <div className="relative overflow-hidden rounded-xl mb-8 bg-surface-container-high aspect-video border border-outline-variant/10 flex items-center justify-center">
-                 <div className="w-full h-full bg-[#1e1e1e] flex items-center justify-center transition-transform duration-700 group-hover:scale-105">
-                    <span className={`text-5xl md:text-6xl ${proj.colorClass} font-headline opacity-60 text-center px-4`}>{proj.bgText}</span>
-                 </div>
-                <div className={`absolute inset-0 bg-gradient-to-t ${idx%2==0 ? 'from-primary/20' : 'from-secondary/20'} to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
-              </div>
-              <div className="flex justify-between items-start">
-                <div>
-                  <h3 className="font-headline text-2xl font-bold mb-2 transition-colors group-hover:text-primary">{proj.title}</h3>
-                  <p className="text-on-surface-variant text-sm mb-4 line-clamp-2">{proj.description}</p>
-                  <div className="flex gap-4">
-                    {proj.tags.map((tag, tIdx) => (
-                      <span key={tIdx} className="text-[10px] font-label font-bold text-tertiary">#{tag}</span>
-                    ))}
+            <div 
+              key={idx} 
+              className={`architect-card group cursor-pointer p-8 rounded-2xl flex flex-col justify-between ${proj.large ? 'bento-item-large' : 'bento-item-medium'}`}
+              onClick={() => setSelectedProject(proj)}
+            >
+              <div>
+                <div className="flex justify-between items-start mb-8">
+                  <span className="serial-decorator">PROJECT_SPEC::{proj.bgText.toUpperCase()}</span>
+                  <div className={`w-10 h-10 rounded-full bg-surface-container flex items-center justify-center ${proj.colorClass} group-hover:bg-primary group-hover:text-black transition-all`}>
+                    <span className="material-symbols-outlined text-sm">north_east</span>
                   </div>
                 </div>
-                <div className={`${proj.colorClass} hover:text-white transition-colors`}>
-                  <span className="material-symbols-outlined">north_east</span>
-                </div>
+                
+                <h3 className="font-headline text-3xl font-bold mb-4 transition-colors group-hover:text-primary leading-tight">
+                  {proj.title}
+                </h3>
+                <p className="text-on-surface-variant text-sm mb-8 line-clamp-2 leading-relaxed">
+                  {proj.description}
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                 <div className="h-[1px] w-full bg-outline-variant/10"></div>
+                 <div className="flex flex-wrap gap-2">
+                    {proj.tags.map((tag, tIdx) => (
+                      <span key={tIdx} className="tech-tag">#{tag}</span>
+                    ))}
+                 </div>
               </div>
             </div>
           ))}
