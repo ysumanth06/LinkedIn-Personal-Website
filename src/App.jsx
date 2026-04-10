@@ -295,7 +295,7 @@ const Contact = () => (
       <h2 className="font-headline text-5xl md:text-7xl font-bold tracking-tighter mb-12">Let's build the <span className="text-primary italic">future.</span></h2>
       <div className="flex flex-col items-center gap-6">
         <a 
-          className="flex items-center gap-3 bg-[#0a66c2] hover:bg-[#004182] text-white px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 shadow-xl shadow-[#0a66c2]/20" 
+          className="flex items-center gap-3 bg-primary/20 hover:bg-primary/40 text-primary px-8 py-4 rounded-full font-bold transition-all transform hover:scale-105 border border-primary/30" 
           href="https://www.linkedin.com/in/ysumanth" 
           target="_blank" 
           rel="noreferrer"
