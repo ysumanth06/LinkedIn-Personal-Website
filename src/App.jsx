@@ -46,7 +46,6 @@ const Hero = () => (
       </div>
       <div className="lg:col-span-4 mt-12 lg:mt-0 mx-8 lg:mx-0">
         <div className="relative group">
-          <span className="absolute -top-6 left-0 serial-decorator">NODE_IDENTITY::SUMANTH_Y</span>
           <div className="absolute -inset-1 bg-gradient-to-r from-primary to-secondary rounded-xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
           <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-surface-container border border-outline-variant/15 flex items-center justify-center">
              <img src={profilePic} alt="Sumanth Yanamala" className="w-full h-full object-cover grayscale contrast-125 transition-transform duration-700 group-hover:scale-105" />
@@ -64,8 +63,7 @@ const About = () => (
     <div className="max-w-7xl mx-auto px-8 relative z-10">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
         <div className="lg:col-span-4">
-          <span className="serial-decorator block mb-4">CORE_INTEL::01</span>
-          <h2 className="font-headline text-4xl font-bold tracking-tight text-primary">Mission Profile</h2>
+          <h2 className="font-headline text-4xl font-bold tracking-tight text-primary">About</h2>
           <div className="w-12 h-1 bg-secondary mt-4"></div>
         </div>
         <div className="lg:col-span-8 lg:pl-12">
@@ -95,7 +93,7 @@ const Experience = () => {
       role: "Salesforce/Conga CLM Solution Architect",
       company: "EVERNORTH HEALTH SERVICES",
       description: "Leading enterprise-scale Conga CLM implementations and architecting AI-driven automation strategies for healthcare ecosystems.",
-      stack: ["Conga CLM", "Salesforce Core", "Agentforce", "n8n"],
+      stack: ["salesforce", "Conga CLM", "AI", "apex", "docusign", "x-author for Word", "Copado"],
       active: true
     },
     {
@@ -103,7 +101,7 @@ const Experience = () => {
       role: "Solution Architect & Sr. Engineer",
       company: "SOLUTIONSOFT INC",
       description: "Designed complex Salesforce integrations and custom contract negotiation workflows featuring advanced eSignature protocols.",
-      stack: ["Salesforce", "Apex", "DocuSign API", "AWS"],
+      stack: ["salesforce", "lwc", "docusign", "apex", "Nintex", "x-author for Excel"],
       active: false
     },
     {
@@ -111,7 +109,7 @@ const Experience = () => {
       role: "Sr. Salesforce & CLM Engineer",
       company: "SVK SYSTEMS INC",
       description: "Developed and maintained high-performance contract lifecycle management systems and custom intelligent workflow automations.",
-      stack: ["Apttus CLM", "Visualforce", "SOQL", "Intelligent Approvals"],
+      stack: ["salesforce", "Conga CLM", "apex", "docusign", "SOQL", "X-author for word"],
       active: false
     }
   ];
@@ -120,7 +118,7 @@ const Experience = () => {
     <section className="py-32 bg-surface relative overflow-hidden" id="experience">
       <div className="absolute inset-0 blueprint-grid opacity-20"></div>
       <div className="max-w-7xl mx-auto px-8 relative z-10">
-        <h2 className="font-headline text-4xl font-bold tracking-tight mb-20 uppercase tracking-[0.2em] text-primary">System History</h2>
+        <h2 className="font-headline text-4xl font-bold tracking-tight mb-20 uppercase tracking-[0.2em] text-primary">Timeline</h2>
         
         <div className="space-y-12">
           {experiences.map((exp, idx) => (
@@ -132,7 +130,6 @@ const Experience = () => {
               <div className="pb-12 architect-card p-8 rounded-xl w-full">
                 <div className="flex flex-col md:flex-row justify-between mb-4">
                   <div>
-                    <span className="serial-decorator block mb-2">AUTH_ID: {exp.company.substring(0,3)}_CONF_00{idx+1}</span>
                     <h3 className="font-headline text-2xl font-bold">{exp.role}</h3>
                     <p className="text-secondary font-medium tracking-wide">{exp.company}</p>
                   </div>
@@ -261,8 +258,7 @@ const Projects = ({ setSelectedProject }) => {
               onClick={() => setSelectedProject(proj)}
             >
               <div>
-                <div className="flex justify-between items-start mb-8">
-                  <span className="serial-decorator">PROJECT_SPEC::{proj.bgText.toUpperCase()}</span>
+                <div className="flex justify-end mb-8">
                   <div className={`w-10 h-10 rounded-full bg-surface-container flex items-center justify-center ${proj.colorClass} group-hover:bg-primary group-hover:text-black transition-all`}>
                     <span className="material-symbols-outlined text-sm">north_east</span>
                   </div>
