@@ -219,6 +219,30 @@ const Projects = ({ setSelectedProject }) => {
       tags: ["APEX", "DOCS", "DIGITAL-SIG"],
       bgText: "DocGen",
       colorClass: "text-secondary"
+    },
+    {
+      title: "Burrow",
+      description: "World's First AI-enabled Salesforce QA Automation Tool.",
+      fullDescription: "Burrow - World's First AI-enabled Salesforce QA Automation Tool with auto-scripting and metadata awareness for high-speed regression testing.",
+      tags: ["QA", "AUTOMATION", "AI"],
+      bgText: "Burrow",
+      colorClass: "text-tertiary"
+    },
+    {
+      title: "Mass File Exporter",
+      description: "Advanced SOQL-driven native tool for mass file export.",
+      fullDescription: "Mass File Exporter - A Native Salesforce Tool to export mass files with advanced SOQL, including support for complex AppExchange product data models.",
+      tags: ["DATA", "MIGRATION", "SOQL"],
+      bgText: "FileExp",
+      colorClass: "text-primary"
+    },
+    {
+      title: "AI Contract Analysis",
+      description: "Intelligent document analysis with beautiful UI highlights.",
+      fullDescription: "AI Contract Analysis - Intelligent Document Analysis Tool which automatically identifies key information in contracts and highlights it natively within Salesforce.",
+      tags: ["CONTRACTS", "AI", "MODELS"],
+      bgText: "AICont",
+      colorClass: "text-secondary"
     }
   ];
 
