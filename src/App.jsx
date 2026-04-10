@@ -90,7 +90,7 @@ const Experience = () => {
   const experiences = [
     {
       period: "2023 — PRESENT",
-      role: "Salesforce/Conga CLM Solution Architect",
+      role: "Solution Architect – Salesforce, CLM & AI Integrations",
       company: "EVERNORTH HEALTH SERVICES",
       description: "Leading enterprise-scale Conga CLM implementations and architecting AI-driven automation strategies for healthcare ecosystems.",
       stack: ["salesforce", "Conga CLM", "AI", "apex", "docusign", "x-author for Word", "Copado"],
